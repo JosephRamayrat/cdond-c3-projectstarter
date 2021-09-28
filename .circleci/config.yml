@@ -66,6 +66,7 @@ jobs:
           name: Back-end build
           command: |
              cd backend
+             npm i
              npm run build
       - save_cache:
           paths: [backend/node_modules]
@@ -82,6 +83,7 @@ jobs:
           name: run frontend test
           command: |
             cd frontend
+            npm i
             npm run test
                 
   test-backend:
